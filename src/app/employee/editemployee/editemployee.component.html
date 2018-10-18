@@ -1,0 +1,126 @@
+<h2 class="">Edit employee</h2>
+<div class="jumbotron">
+
+  <div class="row">
+    <!--First Column -->
+    <div class="col-md-5">
+
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">Emp id.</label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input class="form-control" [(ngModel)]="employees.id" placeholder="ID" type="number"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">Name</label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input
+            class="form-control"
+            [(ngModel)]="employees.name"
+            ng-trim="true" type="text" placeholder="NAME">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">Sur name</label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input
+            class="form-control"
+            id="surName"
+            name="surName"
+            [(ngModel)]="employees.surname"
+            ng-trim="true" type="text" placeholder="SURNAME">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">Date Of Birth</label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input
+            class="form-control"
+            id="birthDate"
+            name="birthDate"
+            [(ngModel)]="employees.birthDate"
+            ng-trim="true" type="text" placeholder="DATE OF BIRTH">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">Phone</label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input
+            class="form-control"
+            id="Phone"
+            name="Phone"
+            [(ngModel)]="employees.phone"
+            ng-trim="true" type="text" placeholder="PHONE">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-5">
+
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">City</label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input
+            class="form-control"
+            id="City"
+            name="City"
+            [(ngModel)]="employees.city"
+            ng-trim="true" type="text" placeholder="CITY">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">Street</label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input
+            class="form-control"
+            id="Street"
+            name="Street"
+            [(ngModel)]="employees.street"
+            ng-trim="true" type="text" placeholder="STREET">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">Number</label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input
+            class="form-control"
+            id="Number"
+            name="Number"
+            [(ngModel)]="employees.number"
+            ng-trim="true" type="text" placeholder="NUMBER">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="text-right">
+          <button class="btn btn-sm btn-primary text-right" (click)="updateEmployee()">Update</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+

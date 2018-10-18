@@ -1,0 +1,15 @@
+.form-group {
+  padding: 15px;
+
+}
+label {
+  margin-top: 8px;
+}
+.mandatory-fields {
+  color: red;
+  font-size: 12px;
+  font-style: italic;
+}
+.mandatory-asterik {
+  color: red;
+}

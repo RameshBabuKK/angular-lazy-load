@@ -1,0 +1,41 @@
+<div class="col-md-12">
+  <h3>List of emoloyees</h3>
+  <table *ngIf="employees.length > 0">
+    <tr>
+      <th>Id.</th>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Date Of Birth</th>
+      <th>Phone</th>
+      <th>City</th>
+      <th>Street</th>
+      <th>Number</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let emp of employees; let i = index">
+      <td>{{emp.id}}</td>
+      <td>{{emp.name}}</td>
+      <td>{{emp.surname}}</td>
+      <td>{{emp.birthDate}}</td>
+      <td>{{emp.phone}}</td>
+      <td>{{emp.city}}</td>
+      <td>{{emp.street}}</td>
+      <td>{{emp.number}}</td>
+      <td>
+        <button class="btn btn-sm btn-danger" (click)="deleteEmployee(i)">Delete</button>
+      </td>
+      <td>
+        <button class="btn btn-sm btn-primary" (click)="editEmployee(i)">Edit</button>
+      </td>
+    </tr>
+  </table>
+  <table class="bgTotal">
+    <tr>
+      <td colspan="11" class="total-items bgTotal">Total items: {{employees.length}}</td>
+    </tr>
+  </table>
+  <div *ngIf="employees.length <= 0">
+    <h2 class="text-center">No records...</h2>
+  </div>
+</div>

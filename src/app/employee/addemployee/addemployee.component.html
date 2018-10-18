@@ -1,0 +1,130 @@
+<h2 class="">Add employee</h2>
+<div class="jumbotron">
+
+  <div class="row">
+    <!--First Column -->
+    <div class="col-md-5">
+
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">Emp id. <span class="mandatory-asterik">*</span></label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input class="form-control" [(ngModel)]="addEmpData.id" placeholder="ID" type="number"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">Name <span class="mandatory-asterik">*</span></label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input
+            class="form-control"
+            [(ngModel)]="addEmpData.name"
+            ng-trim="true" type="text" placeholder="NAME">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">Sur name</label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input
+            class="form-control"
+            id="surName"
+            name="surName"
+            [(ngModel)]="addEmpData.surname"
+            ng-trim="true" type="text" placeholder="SURNAME">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">Date Of Birth</label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input
+            class="form-control"
+            id="birthDate"
+            name="birthDate"
+            [(ngModel)]="addEmpData.birthDate"
+            ng-trim="true" type="text" placeholder="DATE OF BIRTH">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">Phone</label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input
+            class="form-control"
+            id="Phone"
+            name="Phone"
+            [(ngModel)]="addEmpData.phone"
+            ng-trim="true" type="number" placeholder="PHONE">
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-5">
+
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">City</label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input
+            class="form-control"
+            id="City"
+            name="City"
+            [(ngModel)]="addEmpData.city"
+            ng-trim="true" type="text" placeholder="CITY">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">Street</label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input
+            class="form-control"
+            id="Street"
+            name="Street"
+            [(ngModel)]="addEmpData.street"
+            ng-trim="true" type="text" placeholder="STREET">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-md-4 col-lg-3">
+          <label class="control-label">Number</label>
+        </div>
+        <div class="col-md-8 col-lg-9">
+          <input
+            class="form-control"
+            id="Number"
+            name="Number"
+            [(ngModel)]="addEmpData.number"
+            ng-trim="true" type="number" placeholder="NUMBER">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="text-right">
+          <button class="btn btn-sm btn-primary text-right" (click)="addNewEmployee()">Add</button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <span class="mandatory-fields">* Atleat Employee ID and Name is required</span>
+  </div>
+</div>

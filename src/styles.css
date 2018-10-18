@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~ag-grid/dist/styles/ag-grid.css";
+@import "~ag-grid/dist/styles/ag-theme-balham.css";
+
+body
+{
+    font-size: 12px;
+    font-family: "Arial", Verdana, Helvetica, Sans-Serif;
+    color: #232323; /* */
+    background-color: #F8FCFF;
+}
+
+.page {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+.content-routing-area {
+	padding: 10px;
+}
