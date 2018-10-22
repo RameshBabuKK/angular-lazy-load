@@ -1,25 +1,27 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {SearchemployeeComponent} from "./searchemployee.component";
+import {ActivatedRoute, Router} from "@angular/router";
+import {EmployeeService} from "../employee.service";
 
-import { ListemployeeComponent } from './listemployee.component';
 
-describe('ListemployeeComponent', () => {
-  let component: ListemployeeComponent;
-  let fixture: ComponentFixture<ListemployeeComponent>;
+
+describe('SearchemployeeComponent', () => {
+  let component: SearchemployeeComponent;
+  let fixture: ComponentFixture<SearchemployeeComponent>;
+  let empservice: EmployeeService; let route: ActivatedRoute; let router: Router;
+
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ListemployeeComponent ]
+      declarations: [ SearchemployeeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ListemployeeComponent);
+    fixture = TestBed.createComponent(SearchemployeeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });

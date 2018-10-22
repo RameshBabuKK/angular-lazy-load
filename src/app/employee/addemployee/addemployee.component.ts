@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { EmployeeService } from '../employee.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import {EmployeeService} from '../employee.service';
+import {ActivatedRoute, Router} from '@angular/router';
+import {FormsModule, FormGroup, FormControl, Validators, FormBuilder} from "@angular/forms";
 
 @Component({
   selector: 'app-addemployee',
@@ -8,16 +9,24 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./addemployee.component.css']
 })
 export class AddEmployeeComponent implements OnInit {
-  @Input() addEmpData = { id: null, name: '', surname: '', birthDate: '', phone: '', city: '', street: '', number: null };
-  constructor(private empservice: EmployeeService, private route: ActivatedRoute, private router: Router) { }
+  @Input() addEmpData = {id: null, name: '', surname: '', birthDate: '', phone: '', city: '', street: '', number: null};
+  formgroup: FormGroup;
+  constructor(private empservice: EmployeeService, private route: ActivatedRoute, private router: Router) {
+  }
 
   ngOnInit() {
+    debugger;
   }
 
   addNewEmployee() {
     if (this.addEmpData.id && this.addEmpData.name) {
-      this.empservice.addEmployee(this.addEmpData);
-      this.router.navigate(['/searchemployee']);
+      this.empservice.addEmployee(this.addEmpData).subscribe((result) => {
+        debugger;
+        this.router.navigate(['/searchemployee']);
+      }, (err) => {
+        console.log(err);
+      });
+      // this.router.navigate(['/searchemployee']);
     }
   }
 }

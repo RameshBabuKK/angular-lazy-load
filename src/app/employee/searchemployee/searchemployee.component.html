@@ -1,5 +1,16 @@
 <div class="col-md-12">
   <h3>List of emoloyees</h3>
+  <div>
+    <form #empForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>
+          Search with name:
+          <input class="form-control" [(ngModel)]="empFormModel.name" type="text" [formControl]="name">
+        </label>&nbsp;
+        <button class="btn btn-primary btn-sm">Submit</button>
+      </div>
+    </form>
+  </div>
   <table *ngIf="employees.length > 0">
     <tr>
       <th>Id.</th>
@@ -38,4 +49,5 @@
   <div *ngIf="employees.length <= 0">
     <h2 class="text-center">No records...</h2>
   </div>
+
 </div>

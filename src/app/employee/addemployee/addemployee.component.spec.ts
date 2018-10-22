@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AddEmployeeComponent } from './addemployee.component';
+import {AddemployeeRoutingModule} from "./addemployee-routing.module";
+import {FormsModule} from "@angular/forms";
+import {CommonModule} from "@angular/common";
 
 describe('AddEmployeeComponent', () => {
   let component: AddEmployeeComponent;
@@ -8,9 +11,16 @@ describe('AddEmployeeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddEmployeeComponent ]
+      declarations: [ AddEmployeeComponent ],
+      imports: [
+        CommonModule,
+        FormsModule,
+        AddemployeeRoutingModule
+      ],
     })
-    .compileComponents();
+    .compileComponents().then(() => {
+      fixture = TestBed.createComponent(AddEmployeeComponent);
+    });
   }));
 
   beforeEach(() => {
@@ -19,7 +29,4 @@ describe('AddEmployeeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
 });
