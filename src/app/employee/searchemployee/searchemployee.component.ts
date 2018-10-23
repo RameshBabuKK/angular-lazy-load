@@ -58,15 +58,13 @@ export class SearchemployeeComponent implements OnInit {
   }
 
   editEmployee(selectedIndex) {
-    debugger;
-    this.router.navigate(['/editemployee/' + selectedIndex]);
+    this.router.navigate(['employee/editemployee/' + selectedIndex]);
   }
 
   onSubmit() {
     this.submitted = true;
     this.empservice.searchEmployeeFormData(this.empFormModel.name).subscribe((result) => {
       if (result) {
-        debugger;
         this.employees = [];
         console.log(result);
         this.employees = result;

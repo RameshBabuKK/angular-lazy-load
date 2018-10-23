@@ -33,7 +33,6 @@ export class EmployeeService {
   //extract the response and send back the observe data
   private extractData(res: Response) {
     const body = res;
-    debugger;
     if (this.employeeDetails) {
       this.employeeDetails = this.employeeDetails;
     } else {
@@ -110,7 +109,6 @@ export class EmployeeService {
   //Search employee details with name
   searchEmployeeFormData (formName): Observable<any> {
     const getEmpList = JSON.parse(this.getEmpLocalstorage());
-    debugger;
     this.searchResult = [];
     for (let i = 0; i < getEmpList.length; i++) {
       if (getEmpList[i].name === formName) {

@@ -1,17 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddEmployeeComponent } from './addemployee.component';
+import { EmployeeComponent } from './employee.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {CommonModule} from "@angular/common";
 import {BrowserModule} from "@angular/platform-browser";
 
-describe('AddEmployeeComponent', () => {
-  let component: AddEmployeeComponent;
-  let fixture: ComponentFixture<AddEmployeeComponent>;
+describe('EmployeeComponent', () => {
+  let component: EmployeeComponent;
+  let fixture: ComponentFixture<EmployeeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AddEmployeeComponent ],
+      declarations: [ EmployeeComponent ],
       imports: [
         CommonModule,
         FormsModule,
@@ -19,13 +19,14 @@ describe('AddEmployeeComponent', () => {
         ReactiveFormsModule
       ],
     }).compileComponents().then(() => {
-      fixture = TestBed.createComponent(AddEmployeeComponent);
-      component = fixture.componentInstance;
-      fixture.detectChanges();
+      fixture = TestBed.createComponent(EmployeeComponent);
     });
 
+    it ('should be create', async(() => {
+      expect(component).toBeTruthy();
+    }));
+
+
   }));
-
-
 
 });

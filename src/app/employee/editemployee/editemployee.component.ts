@@ -22,7 +22,7 @@ export class EditemployeeComponent implements OnInit {
 
   updateEmployee() {
     this.empservice.updateEmployeeList(this.route.snapshot.params['id'], this.employees).subscribe((result) => {
-      this.router.navigate(['/searchemployee']);
+      this.router.navigate(['employee/searchemployee']);
     }, (err) => {
       console.log(err);
     });

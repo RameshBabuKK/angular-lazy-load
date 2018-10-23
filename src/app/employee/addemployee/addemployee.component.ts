@@ -15,14 +15,13 @@ export class AddEmployeeComponent implements OnInit {
   }
 
   ngOnInit() {
-    debugger;
+    //To do
   }
 
   addNewEmployee() {
     if (this.addEmpData.id && this.addEmpData.name) {
       this.empservice.addEmployee(this.addEmpData).subscribe((result) => {
-        debugger;
-        this.router.navigate(['/searchemployee']);
+        this.router.navigate(['employee/searchemployee']);
       }, (err) => {
         console.log(err);
       });
